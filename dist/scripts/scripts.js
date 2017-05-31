@@ -50733,41 +50733,6 @@ var app = angular.module('vizExplorer', ['chart.js', 'timer']); // jshint ignore
 				initialIndex++;
 			});
 		};
-
-		self.pod = {
-			pid: 19283,
-			status: 1,
-			instances: 0,
-			restarts: 0,
-			upTime: 0,
-			cpu: {
-				data: [34, 50, 80, 20, 100, 30, 22, 91, 34, 50, 80, 20, 100, 30, 22, 91, 34, 50, 80, 20, 100, 30, 22, 91, 34, 50, 80, 20, 100, 30, 22, 91, 34, 50, 80, 20, 100, 30, 22, 91, 34, 50, 80, 20, 100, 30, 22, 91],
-				labels: false,
-				override: {
-					backgroundColor: '#505194',
-					borderWidth: 0,
-					pointBackgroundColor: '#424a55',
-					pointBorderColor: '#ffffff'
-				}
-			},
-			memory: {
-				data: [50, 100],
-				labels: ['Used Memory', 'Available Memory'],
-				colors: ['#0775cc', '#ffffff'],
-				options: {
-					cutoutPercentage: 80,
-					animation: {
-						animateScale: false
-					},
-					tooltips: {
-						enabled: false
-					}
-				},
-				override: {
-					borderWidth: 0
-				}
-			}
-		};
 	});
 })();
 
