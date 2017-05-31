@@ -1,0 +1,35 @@
+{
+  "name": "vizexplorer-test",
+  "version": "1.0.0",
+  "description": "VizExplorer Technical Assessment",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanpablob/vizexplorer-test.git"
+  },
+  "author": "juanpablob <m.juanpablob@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanpablob/vizexplorer-test/issues"
+  },
+  "homepage": "https://github.com/juanpablob/vizexplorer-test#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-less": "^3.3.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watch": "^4.3.3"
+  },
+  "dependencies": {
+    "angular-chart.js": "^1.1.1"
+  }
+}

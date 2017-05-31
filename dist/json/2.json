@@ -1,0 +1,96 @@
+{
+	"pid": 19282,
+	"status": 1,
+	"instances": 4,
+	"restarts": {
+		"count": 0
+	},
+	"upTime": 0,
+	"cpu": {
+		"average": 67,
+		"data": [
+			10,
+			50,
+			80,
+			20,
+			100,
+			30,
+			22,
+			91,
+			40,
+			50,
+			80,
+			20,
+			100,
+			30,
+			22,
+			10,
+			34,
+			50,
+			80,
+			20,
+			100,
+			30,
+			22,
+			24,
+			34,
+			50,
+			80,
+			20,
+			100,
+			30,
+			22,
+			91,
+			34,
+			50,
+			80,
+			20,
+			150,
+			30,
+			22,
+			91,
+			34,
+			50,
+			80,
+			20,
+			100,
+			30,
+			22,
+			91
+		],
+		"labels": false,
+		"override": {
+			"backgroundColor": "#505194",
+			"borderWidth": 0,
+			"pointBackgroundColor": "#424a55",
+			"pointBorderColor": "#ffffff"
+		}
+	},
+	"memory": {
+		"average": 10,
+		"data": [
+			90,
+			100
+		],
+		"labels": [
+			"Used Memory",
+			"Available Memory"
+		],
+		"colors": [
+			"#0775cc",
+			"#ffffff"
+		],
+		"options": {
+			"cutoutPercentage": 80,
+			"animation": {
+				"animateScale": false
+			},
+			"tooltips": {
+				"enabled": false
+			}
+		},
+		"override": {
+			"borderWidth": 0
+		}
+	}
+}

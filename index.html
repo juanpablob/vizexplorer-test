@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="vizExplorer">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+		<title>VizExplorer — Dashboard</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="./dist/styles/styles.css" rel="stylesheet">
+
+		<script src="./dist/scripts/scripts.js"></script>
+	</head>
+
+	<body ng-controller="dashboard as dashboard">
+		<div class="container">
+			<header id="header">
+				<div class="row">
+					<div class="col-md-4">
+						<h1><a href="./"><img src="dist/images/logo-vizexplorer.svg" alt="VizExplorer"></a></h1>
+					</div>
+
+					<div class="col-md-8">
+						<h5>Dashboard Assignment</h5>
+					</div>
+				</div>
+			</header>
+
+			<section id="content">
+				<div class="row">
+					<div class="col-md-2">
+						<nav id="nav">
+							<a href="#" class="btn btn-default" ng-click="dashboard.add();">Add Process</a>
+						</nav>
+					</div>
+
+					<div class="col-md-10">
+						<div class="row processes">
+							<pod ng-repeat="pod in dashboard.pods" kpis="pod.data" index="pod.index" remove="dashboard.remove;"></pod>
+
+							<div class="processes-empty" ng-if="dashboard.pods.length === 0">
+								<p>There's no active processes. <a href="#" ng-click="dashboard.add();">Add one?</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
