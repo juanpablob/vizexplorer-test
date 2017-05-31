@@ -1,0 +1,354 @@
+@charset 'UTF-8';
+/**
+ * Local Stylesheet
+ *
+ * @author Juan Pablo Barrientos <jbarrientos@eclass.cl>
+ * @desc VizExplorer Assessment Styles
+ * @version 1.0.0
+ * @since 2017-05-31
+ */
+@import '../../bower_components/bootstrap/dist/css/bootstrap.css';
+/**
+ * Segoe UI
+ */
+/* Light */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 200;
+  font-style: normal;
+  src: url('../fonts/segoeuil.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 200;
+  font-style: italic;
+  src: url('../fonts/seguili.ttf') format('truetype');
+}
+/* Semi Light */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/segoeuisl.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 300;
+  font-style: italic;
+  src: url('../fonts/seguisli.ttf') format('truetype');
+}
+/* Normal */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/segoeui.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 400;
+  font-style: italic;
+  src: url('../fonts/segoeuii.ttf') format('truetype');
+}
+/* Semi Bold */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/seguisb.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 500;
+  font-style: italic;
+  src: url('../fonts/seguisbi.ttf') format('truetype');
+}
+/* Bold */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/segoeuib.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 700;
+  font-style: italic;
+  src: url('../fonts/segoeuiz.ttf') format('truetype');
+}
+/* Black */
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../fonts/seguibl.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoeui';
+  font-weight: 800;
+  font-style: italic;
+  src: url('../fonts/seguibli.ttf') format('truetype');
+}
+/**
+ * DJB Digital
+ */
+@font-face {
+  font-family: 'Digital';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/djb-digital.ttf') format('truetype');
+}
+/**
+ * Gradient
+ */
+/**
+ * Variables
+ */
+/**
+ * Caffolding
+ */
+body {
+  font-family: 'Segoeui', sans-serif;
+  color: white;
+  background-color: #39404a;
+}
+.container {
+  margin: 65px;
+  border-radius: 10px;
+  background-color: white;
+}
+.btn {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 12px;
+  box-shadow: 0 0 2px #d6d6d6;
+}
+.btn.btn-default {
+  border-color: #d6d6d6;
+  color: #808080;
+  background: linear-gradient(to bottom, #fefefe, #e9e9e9);
+}
+.btn.btn-default:active {
+  border-color: #bdbdbd;
+  color: #808080;
+}
+/**
+ * Dashboard
+ */
+#header {
+  padding: 15px 0;
+  color: #bccdd5;
+}
+#header h1 {
+  margin: 0;
+}
+#header h5 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 200%;
+  text-align: right;
+}
+#content {
+  margin: 0 -15px;
+  padding: 15px;
+  border-radius: 0 0 10px 10px;
+  background-color: #f2f2f2;
+}
+#nav .btn {
+  display: block;
+  width: 100%;
+}
+.processes {
+  height: 200px;
+}
+.processes .col-md-6 {
+  margin-bottom: 30px;
+}
+.processes-empty {
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+.processes-empty p {
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+  color: #717e92;
+}
+.process {
+  border-radius: 5px;
+}
+.process-header {
+  padding: 4px 10px;
+  border-radius: 5px 5px 0 0;
+  background: linear-gradient(to bottom, #39404a, #2e323b);
+}
+.process-header-title {
+  float: left;
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: normal;
+  margin: 0;
+  color: #28abe1;
+}
+.process-header-title span {
+  color: white;
+}
+.process-header-remove {
+  display: inline-block;
+  float: right;
+  font-size: 19px;
+  line-height: 100%;
+  font-weight: normal;
+  color: #4f5967;
+}
+.process-header-remove:hover,
+.process-header-remove:active {
+  color: #657284;
+}
+.process-cpu {
+  height: 75px;
+}
+.process-cpu-usage,
+.process-cpu-graph {
+  height: inherit;
+  float: left;
+}
+.process-cpu-usage {
+  padding: 5px 0;
+  width: 17%;
+  background: linear-gradient(to right, #2e323b, #434b56);
+}
+.process-cpu-usage span,
+.process-cpu-usage strong {
+  display: block;
+  text-align: center;
+}
+.process-cpu-usage span {
+  font-size: 10px;
+  font-weight: 500;
+  color: #b3b3b3;
+}
+.process-cpu-usage strong {
+  font-size: 28px;
+  font-weight: 500;
+  color: #636f7f;
+}
+.process-cpu-graph {
+  position: relative;
+  width: 83%;
+  background: linear-gradient(to bottom, #56a4d4, #1278b7);
+  overflow: hidden;
+}
+.process-cpu-graph-chart {
+  position: absolute;
+  top: -86px;
+  left: -60px;
+  width: 440px;
+  height: 75px;
+}
+.process-indicators {
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 5px 5px;
+  list-style-type: none;
+  background: linear-gradient(to bottom, #f2f2f2, #e6e6e6);
+}
+.process-indicators li {
+  width: 17%;
+  float: left;
+  border-right: 1px solid white;
+  text-align: center;
+}
+.process-indicators li:last-child {
+  border-right-width: 0;
+}
+.process-indicators-key,
+.process-indicators-value {
+  display: block;
+}
+.process-indicators-key {
+  margin-bottom: 12px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #b3b3b3;
+}
+.process-indicators-value {
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: bold;
+  color: #616d7e;
+}
+.process-indicators-wrapper {
+  display: block;
+  min-height: 78px;
+  padding: 2px 0;
+  color: #626f80;
+}
+.process-indicators-wrapper:link,
+.process-indicators-wrapper:visited,
+.process-indicators-wrapper:active,
+.process-indicators-wrapper:hover {
+  color: #626f80;
+  text-decoration: none;
+}
+.process-indicators-status strong {
+  color: #95c83d;
+}
+.process-indicators-memory {
+  position: relative;
+}
+.process-indicators-memory strong {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 130%;
+}
+.process-indicators-memory-chart {
+  position: absolute;
+  top: 20px;
+  left: 14px;
+  width: 48px;
+  height: 48px;
+}
+.process-indicators-upTime {
+  width: 32% !important;
+}
+.process-indicators-upTime strong {
+  font-family: 'Digital', sans-serif;
+  font-weight: lighter;
+  font-size: 33px;
+  letter-spacing: 1px;
+  color: #f7921e;
+}
+.process-indicators-restarts--red strong {
+  color: #ec1841;
+}
+.process-indicators-restarts-dropdown {
+  display: none;
+  position: absolute;
+  right: 14px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #62707d;
+  list-style-type: none;
+  background: linear-gradient(to right, #2e323b, #434b56);
+  color: #bbccd3;
+  z-index: 100;
+  cursor: default;
+}
+.process-indicators-restarts-dropdown li {
+  width: 120px;
+  float: none;
+  padding: 2px;
+  border: 0;
+  border-bottom: 1px solid #62707d;
+  font-size: 10px;
+  cursor: default;
+}
+.process-indicators-restarts-dropdown li:last-child {
+  border-bottom-width: 0;
+}
+.process-indicators-restarts:hover ul {
+  display: block;
+}

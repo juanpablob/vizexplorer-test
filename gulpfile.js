@@ -66,15 +66,15 @@ gulp.task('default', function() {
 
 // Build for dist
 gulp.task('build', function() {
-	gulp.src(src + '/styles/styles.scss')
+	gulp.src(src + '/styles/styles.less')
 		.pipe($.less())
 		.pipe($.rename({suffix: '.min'}))
-		.pipe(gulp.dest(dist + '/'));
+		.pipe(gulp.dest(dist + '/styles/'));
 
 	gulp.src(scripts)
 		.pipe($.concat('scripts.js'))
 		.pipe($.stripDebug())
 		.pipe($.jsmin())
 		.pipe($.rename({suffix: '.min'}))
-		.pipe(gulp.dest(dist + '/'));
+		.pipe(gulp.dest(dist + '/scripts/'));
 });

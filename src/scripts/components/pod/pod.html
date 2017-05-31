@@ -1,0 +1,66 @@
+<div class="col-md-6">
+	<div class="process">
+		<div class="process-header clearfix">
+			<h3 class="process-header-title">Process <span>{{$ctrl.index | twoDigit}}</span></h3>
+			<a href="#" class="process-header-remove"><i class="glyphicon glyphicon-remove" ng-click="$ctrl.remove($ctrl.index);"></i></a>
+		</div>
+
+		<div class="process-cpu clearfix">
+			<div class="process-cpu-usage">
+				<span>CPU %</span>
+				<strong>{{$ctrl.kpis.cpu.average}}</strong>
+			</div>
+
+			<div class="process-cpu-graph">
+				<div class="process-cpu-graph-chart">
+					<canvas class="chart chart-line" chart-data="$ctrl.kpis.cpu.data" chart-dataset-override="$ctrl.kpis.cpu.override"></canvas>
+				</div>
+			</div>
+		</div>
+
+		<ul class="process-indicators clearfix">
+			<li class="process-indicators-status">
+				<div class="process-indicators-wrapper">
+					<span class="process-indicators-key">Status</span>
+					<strong class="process-indicators-value">On</strong>
+				</div>
+			</li>
+			<li class="process-indicators-instances">
+				<div class="process-indicators-wrapper">
+					<span class="process-indicators-key">Instances</span>
+					<strong class="process-indicators-value">{{$ctrl.kpis.instances}}</strong>
+				</div>
+			</li>
+			<li class="process-indicators-memory">
+				<div class="process-indicators-wrapper">
+					<span class="process-indicators-key">Memory MB</span>
+					<strong class="process-indicators-value">{{$ctrl.kpis.memory.average}}</strong>
+
+					<div class="process-indicators-memory-chart">
+						<canvas class="chart chart-doughnut" chart-data="$ctrl.kpis.memory.data" chart-labels="$ctrl.kpis.memory.labels" chart-options="$ctrl.kpis.memory.options" chart-dataset-override="$ctrl.kpis.memory.override" chart-colors="$ctrl.kpis.memory.colors"></canvas>
+					</div>
+				</div>
+			</li>
+			<li class="process-indicators-upTime">
+				<div class="process-indicators-wrapper">
+					<span class="process-indicators-key">Up Time</span>
+					<strong class="process-indicators-value">
+						<timer interval="1000">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
+					</strong>
+				</div>
+			</li>
+			<li class="process-indicators-restarts" ng-class="{'process-indicators-restarts--red': $ctrl.kpis.restarts.count > 0}">
+				<a href="#" class="process-indicators-wrapper">
+					<span class="process-indicators-key">Restarts</span>
+					<strong class="process-indicators-value">{{$ctrl.kpis.restarts.count}}</strong>
+
+					<span class="caret"></span>
+
+					<ul class="process-indicators-restarts-dropdown" ng-if="$ctrl.kpis.restarts.count > 0">
+						<li ng-repeat="date in $ctrl.kpis.restarts.data">{{date | date:'medium'}}</li>
+					</ul>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
